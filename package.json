@@ -1,0 +1,12 @@
+{
+  "name": "predi-pro",
+  "version": "1.0.0",
+  "description": "Predi-Pro - plateforme de statistiques et prédictions football",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
