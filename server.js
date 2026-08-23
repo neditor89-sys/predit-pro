@@ -19,26 +19,51 @@ async function apiFootball(endpoint) {
   }
 
   return await response.json();
-}
+  
+  
+  app.get("/api/matches", async (req, res) => {
 
-app.get("/api/matches", async (req, res) => {
   try {
-    const today = new Date().toISOString().split("T")[0];
+
+    const today = new Date();
+
+    const from = today.toISOString().split("T")[0];
+
+    const future = new Date(today);
+    future.setDate(future.getDate() + 7);
+
+    const to = future.toISOString().split("T")[0];
 
     const data = await apiFootball(
-      `/fixtures?from=${today}&to=${today}`
+      `/fixtures?from=${from}&to=${to}&timezone=Africa/Abidjan`
+    );
+
+    console.log(
+      "Matchs reçus :", 
+      data.results
+    );
+
+    console.log(
+      "Erreurs API :",
+      data.errors
     );
 
     res.json(data);
 
   } catch (error) {
+
     console.error(error);
 
     res.status(500).json({
       error: "Impossible de récupérer les matchs."
     });
+
   }
+
 });
+}
+
+
 
 app.get("/api/prediction/:fixture", async (req, res) => {
   try {
