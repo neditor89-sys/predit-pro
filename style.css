@@ -1,0 +1,393 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #080d1c;
+  color: white;
+  padding-bottom: 80px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px;
+  background: #10182e;
+  border-bottom: 1px solid #26345c;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #4b7cff;
+}
+
+.user {
+  color: #aeb8d5;
+  font-size: 14px;
+}
+
+nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 65px;
+  background: #10182e;
+  border-top: 1px solid #26345c;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 10;
+}
+
+nav button {
+  background: none;
+  border: none;
+  color: #7f8aaa;
+  font-size: 23px;
+  padding: 10px 20px;
+}
+
+nav button.active {
+  color: #4b7cff;
+}
+
+main {
+  width: 94%;
+  max-width: 700px;
+  margin: auto;
+}
+
+.page {
+  padding: 25px 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.welcome {
+  background: linear-gradient(135deg, #17244b, #10182e);
+  border: 1px solid #2b3b6b;
+  border-radius: 18px;
+  padding: 24px;
+  margin-bottom: 25px;
+}
+
+.welcome h1 {
+  font-size: 23px;
+  margin-bottom: 8px;
+}
+
+.welcome p {
+  color: #aeb8d5;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-bottom: 15px;
+}
+
+.match-card {
+  background: #111a35;
+  border: 1px solid #27345f;
+  border-radius: 17px;
+  padding: 18px;
+  margin: 15px 0;
+}
+
+.league {
+  color: #6f9aff;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.match-date {
+  color: #929dbc;
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+.teams {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 22px 0;
+}
+
+.team {
+  width: 38%;
+  text-align: center;
+  font-weight: bold;
+}
+
+.team-icon {
+  font-size: 38px;
+  margin-bottom: 8px;
+}
+
+.vs {
+  color: #6f9aff;
+  font-weight: bold;
+}
+
+.team img {
+  display: block;
+  margin: 0 auto 8px;
+  object-fit: contain;
+}
+
+.odds {
+  display: flex;
+  gap: 8px;
+}
+
+.odd {
+  flex: 1;
+  background: #1b274b;
+  border-radius: 9px;
+  padding: 10px;
+  text-align: center;
+}
+
+.odd span {
+  display: block;
+  color: #909bb8;
+  font-size: 11px;
+  margin-bottom: 5px;
+}
+
+.odd strong {
+  font-size: 16px;
+}
+
+.match-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.analyse-btn,
+.favorite-btn {
+  border: none;
+  border-radius: 9px;
+  padding: 12px;
+  font-weight: bold;
+}
+
+.analyse-btn {
+  flex: 1;
+  background: #4b7cff;
+  color: white;
+}
+
+.favorite-btn {
+  width: 48px;
+  background: #202d50;
+  color: white;
+  font-size: 18px;
+}
+
+.prediction {
+  margin-top: 15px;
+  padding: 14px;
+  background: #182448;
+  border-radius: 10px;
+}
+
+.prediction-title {
+  color: #8faeff;
+  font-size: 13px;
+}
+
+.prediction strong {
+  display: block;
+  margin-top: 5px;
+  font-size: 18px;
+}
+
+.filters {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  margin-bottom: 15px;
+}
+
+.filter {
+  border: 1px solid #29385f;
+  background: #121c38;
+  color: #aab4d0;
+  padding: 9px 15px;
+  border-radius: 20px;
+}
+
+.filter.active {
+  background: #4b7cff;
+  color: white;
+}
+
+.empty {
+  text-align: center;
+  color: #818ca8;
+  padding: 40px 10px;
+}
+
+.profile-card {
+  text-align: center;
+  background: #111a35;
+  border: 1px solid #27345f;
+  border-radius: 18px;
+  padding: 30px;
+}
+
+.avatar {
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+
+.profile-card p {
+  color: #8994b2;
+  margin: 8px 0 25px;
+}
+
+.logout {
+  border: none;
+  background: #d9415d;
+  color: white;
+  padding: 13px 25px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.back-btn {
+  border: none;
+  background: #182448;
+  color: white;
+  padding: 11px 16px;
+  border-radius: 10px;
+  margin-bottom: 18px;
+  font-weight: bold;
+}
+
+.analysis-header {
+  background: linear-gradient(135deg, #17244b, #10182e);
+  border: 1px solid #2b3b6b;
+  border-radius: 18px;
+  padding: 22px;
+  text-align: center;
+}
+
+.analysis-header .teams {
+  margin: 25px 0;
+}
+
+.analysis-section {
+  background: #111a35;
+  border: 1px solid #27345f;
+  border-radius: 16px;
+  padding: 18px;
+  margin-top: 15px;
+}
+
+.form-row {
+  display: flex;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.form {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.win {
+  background: #16875b;
+}
+
+.draw {
+  background: #92751b;
+}
+
+.loss {
+  background: #a52d43;
+}
+
+.stat-line {
+  margin-top: 15px;
+}
+
+.stat-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 7px;
+}
+
+.stat-top span {
+  color: #aeb8d5;
+}
+
+.progress {
+  height: 9px;
+  background: #202d50;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: #4b7cff;
+  border-radius: 20px;
+}
+
+.probability-box {
+  display: flex;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.probability {
+  flex: 1;
+  background: #182448;
+  border-radius: 10px;
+  padding: 13px;
+  text-align: center;
+}
+
+.probability span {
+  display: block;
+  color: #909bb8;
+  font-size: 12px;
+}
+
+.probability strong {
+  display: block;
+  font-size: 22px;
+  margin-top: 5px;
+}
+
+.final-prediction {
+  text-align: center;
+  border: 1px solid #4b7cff;
+  background: #142044;
+}
+
+.confidence {
+  color: #6f9aff;
+  margin-top: 8px;
+}
