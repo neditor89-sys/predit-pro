@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Predi-Pro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <div class="logo">⚽ Predi<span>-Pro</span></div>
+
+  <div class="user">
+    👤 <span id="userName">Utilisateur</span>
+  </div>
+</header>
+
+<nav>
+  <button class="active" onclick="showPage('accueil')">🏠</button>
+  <button onclick="showPage('matchs')">⚽</button>
+  <button onclick="showPage('favoris')">⭐</button>
+  <button onclick="showPage('profil')">👤</button>
+</nav>
+
+<main>
+
+  <!-- ACCUEIL -->
+  <section id="accueil" class="page">
+
+    <div class="welcome">
+      <h1>Bienvenue sur Predi-Pro 👋</h1>
+      <p>Analyse les matchs et découvre nos prédictions.</p>
+    </div>
+
+    <h2>🔥 Matchs populaires</h2>
+
+    <div id="popularMatches"></div>
+
+  </section>
+
+
+  <!-- MATCHS -->
+  <section id="matchs" class="page hidden">
+
+    <h1>⚽ Matchs à venir</h1>
+
+    <div class="filters">
+      <button class="filter active">Tous</button>
+      <button class="filter">Aujourd'hui</button>
+      <button class="filter">Demain</button>
+    </div>
+
+    <div id="matches"></div>
+
+  </section>
+
+
+  <!-- FAVORIS -->
+  <section id="favoris" class="page hidden">
+
+    <h1>⭐ Mes favoris</h1>
+
+    <div id="favorites">
+      <p class="empty">
+        Aucun match ajouté aux favoris.
+      </p>
+    </div>
+
+  </section>
+
+
+  <!-- PROFIL -->
+  <section id="profil" class="page hidden">
+
+    <h1>👤 Mon profil</h1>
+
+    <div class="profile-card">
+
+      <div class="avatar">👤</div>
+
+      <h2 id="profileName">Utilisateur</h2>
+
+      <p>Membre de Predi-Pro</p>
+
+      <button class="logout" onclick="logout()">
+        🚪 Se déconnecter
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- ANALYSE DU MATCH -->
+  <section id="analysePage" class="page hidden">
+
+    <button class="back-btn" onclick="showPage('matchs')">
+      ← Retour aux matchs
+    </button>
+
+    <div id="analyseContent"></div>
+
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
